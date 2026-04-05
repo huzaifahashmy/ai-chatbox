@@ -1,4 +1,0 @@
-secret_key_for_openai = "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"
-
-secret_key_for_gemini = "AIzaSyBQQn0yMIDsfjLCslFH31VnVQtl5rm6yXs"
-
