@@ -1,11 +1,11 @@
 import streamlit as st
 from google import genai
 
-# 🔧 Page setup
+# Page setup
 st.set_page_config(page_title="AI Chat", layout="wide", initial_sidebar_state="collapsed")
 
-# 🔑 Gemini client — replace with your API key
-client = genai.Client(api_key="AIzaSyBQQn0yMIDsfjLCslFH31VnVQtl5rm6yXs")
+# Gemini client replace with your API key
+client = genai.Client(api_key="your api key here")
 
 # 🎨 Aesthetic dark UI
 st.markdown("""
@@ -223,11 +223,11 @@ textarea::placeholder {
 </style>
 """, unsafe_allow_html=True)
 
-# 💬 Chat state
+#  Chat state
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-# 💬 Render messages
+# Render messages
 if not st.session_state.messages:
     st.markdown("""
     <div class="empty-state">
@@ -243,7 +243,7 @@ else:
         else:
             st.markdown(f'<div class="msg-ai"><div class="msg-ai-inner">{msg}</div></div>', unsafe_allow_html=True)
 
-# 💬 Input
+# Input
 user_input = st.chat_input("Ask me anything...")
 
 if user_input:
